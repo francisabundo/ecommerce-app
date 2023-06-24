@@ -16,7 +16,7 @@ export default function Banner({ isError }) {
     return (
       <Row>
         <Col className='p-5'>
-          <h1>Welcome to Audio Asia</h1>
+          <h1>Welcome to Audio Asia!</h1>
             <h4 className="p-5">Purchase your favorite gears now!</h4>
         </Col>
       </Row>

@@ -18,6 +18,8 @@ import AdminPanel from './pages/AdminPanel';
 import CreateProduct from './pages/CreateProduct';
 import AllOrders from './pages/AllOrders';
 import UpdateProduct from './pages/UpdateProduct';
+import AccountPage from './pages/AccountPage';
+import MyOrders from './pages/MyOrders';
 
 
 function App() {
@@ -71,8 +73,23 @@ function App() {
                     <Route path="/products/:productId" element={<ProductView />} />
                     <Route path="*" element={<Banner isError={true} />} />
                     <Route path="/products" element={<Products />} />
-                    <Route path="/orders/checkout" element={<Checkout />} />
-            
+
+                    
+                    
+
+                    {
+                        user.id && !user.isAdmin && (
+                            <Route path="/orders/completed" element={<MyOrders />} />
+                            )
+					}
+                    {
+                        user.id && !user.isAdmin && (
+                            <Route path="/orders/checkout" element={<Checkout />} />
+                            )
+					}
+
+
+                    <Route path="/users/details" element={<AccountPage />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/logout" element={<Logout />} />           

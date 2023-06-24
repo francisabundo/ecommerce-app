@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 export default function AllOrders() {
   const [orders, setOrders] = useState([]);
 
@@ -33,26 +32,26 @@ export default function AllOrders() {
   
 
   return (
-    <div className="all-orders-page ">
-    <h2 className='my-5'>All Orders</h2>
+    <div className="container all-orders-page">
+      <h2 className="my-5">All Orders</h2>
 
-    {orders.map(order => (
-      <div key={order._id}>
-        <h5>Order ID: {order._id}</h5>
-        {order.orderItems.map(orderItem => (
-          <div key={orderItem.product}>
-            <p>User ID: {orderItem.userId}</p>
-            <h5>Order Items:</h5>
-            <p>Product: {orderItem.name}</p>
-            <p>Quantity: {orderItem.quantity}</p>
-            <p>Price: ${orderItem.price}</p>
-            <h4>Total: $ {Number(orderItem.quantity) * Number(orderItem.price)}</h4>
+      {orders.map(order => (
+        <div key={order._id} className="card mb-3">
+          <div className="card-header">
+            <h5>Order ID: {order._id}</h5>
+            {order.orderItems.map(orderItem => (
+              <div key={orderItem.product}>
+                <p>User ID: {order.userId}</p>
+                <h5>Order Items:</h5>
+                <p>Product: {orderItem.name}</p>
+                <p>Quantity: {orderItem.quantity}</p>
+                <p>Price: ${orderItem.price}</p>
+                <h4>Total: $ {Number(orderItem.quantity) * Number(orderItem.price)}</h4>
+              </div>
+            ))}
           </div>
-        ))}
-        
-        <hr />
-      </div>
-    ))}
-  </div>
+        </div>
+      ))}
+    </div>
   );
 }

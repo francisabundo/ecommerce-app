@@ -11,7 +11,7 @@ export default function AccountPage() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    fetch(`http://localhost:4000/users/details`, {
+    fetch(`${process.env.REACT_APP_API_URL}/users/details`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ const token = localStorage.getItem('token');
 
    
       // Fetch user's completed orders from the backend API
-      fetch('http://localhost:4000/orders/completed', {
+      fetch(`${process.env.REACT_APP_API_URL}/orders/completed`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

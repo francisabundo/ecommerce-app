@@ -39,7 +39,7 @@ export default function Checkout() {
   };
 
   return (
-    <div className="checkout-page text-center mt-5">
+    <div className="checkout-page text-center mt-5" style={{ minHeight: '100vh' }}>
       <h2>Checkout</h2>
       <p>Product: {product.name}</p>
       <p>Price: $ {product.price}</p>

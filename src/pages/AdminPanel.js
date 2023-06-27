@@ -79,7 +79,7 @@ const archiveProduct = (productId, isActive) => {
 
   return (
 
-    <div>
+    <div style={{ minHeight: '100vh' }}>
           <h1 className="mt-3 text-center">Admin Dashboard</h1>
 
           <Link to="/admin/createproduct" ><Button className="mt-5" variant='danger'>Create New Product</Button></Link>

@@ -22,16 +22,14 @@ export default function Products() {
 	
 
 	return (
-		<>
-			{/* <h2 className='my-5'>Products</h2> */}
-
+		<div style={{ minHeight: '100vh' }}>
 		
 			<h1 className='text-center my-5'>Products</h1>
 
             <div className="products">
                 { products }
             </div>
-		</>
+		</div>
 	)
 }
 

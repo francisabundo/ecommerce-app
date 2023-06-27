@@ -55,9 +55,11 @@ const token = localStorage.getItem('token');
   };
 
   return (
-    <div className="create-product-page my-5">
-      <h2>Create Product</h2>
-      <Form onSubmit={handleSubmit}>
+    <div className="create-product-page my-5" style={{ minHeight: '100vh' }}>
+      <h2 className='text-center mb-5'>Create Product</h2>
+
+      <Form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: '0 auto' }}>
+
         <Form.Group controlId="name">
           <Form.Label>Name <em>(required)</em> :</Form.Label>
           <Form.Control

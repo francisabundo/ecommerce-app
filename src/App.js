@@ -20,6 +20,7 @@ import AllOrders from './pages/AllOrders';
 import UpdateProduct from './pages/UpdateProduct';
 import AccountPage from './pages/AccountPage';
 import MyOrders from './pages/MyOrders';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -51,7 +52,7 @@ function App() {
 
     return (
 
-    <UserProvider value={{ user, setUser, unsetUser }}>
+    <UserProvider value={{ user, setUser, unsetUser }} >
  
         <Router>      
         <   AppNavbar />
@@ -95,6 +96,7 @@ function App() {
                     <Route path="/logout" element={<Logout />} />           
                 </Routes>
             </Container>
+           <Footer /> 
         </Router>
     </UserProvider>
 

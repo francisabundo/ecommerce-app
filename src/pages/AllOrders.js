@@ -32,7 +32,7 @@ export default function AllOrders() {
   
 
   return (
-    <div className="container all-orders-page">
+    <div className="container all-orders-page" style={{ minHeight: '100vh' }}>
       <h2 className="my-5">All Orders</h2>
 
       {orders.map(order => (

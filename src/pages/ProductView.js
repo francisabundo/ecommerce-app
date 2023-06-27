@@ -42,7 +42,7 @@ export default function ProductView() {
   };
 
   return (
-    <div className="single-product my-5">
+    <div className="single-product my-5" style={{ minHeight: '100vh' }}>
       {product && (
         <div>
           

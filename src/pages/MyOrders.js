@@ -32,7 +32,7 @@ const token = localStorage.getItem('token');
   }, []);
 
   return (
-    <div className="container">
+    <div className="container" style={{ minHeight: '100vh' }}>
       <h1 className="my-5">My Orders</h1>
 
       {orders.map(order => (

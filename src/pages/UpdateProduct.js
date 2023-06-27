@@ -66,7 +66,7 @@ export default function UpdateProduct() {
   };
 
   return (
-    <div className="update-product-page my-5">
+    <div className="update-product-page my-5" style={{ minHeight: '100vh' }}>
       <h2>Update Product</h2>
       <Form onSubmit={handleUpdate}>
         <Form.Group controlId="name">

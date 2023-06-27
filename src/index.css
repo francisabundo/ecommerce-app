@@ -6,6 +6,7 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
   }
   
 
@@ -24,22 +25,22 @@ body {
     margin-right: auto;
   }
 
-
-  
   .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
   
-  .product {
-    border: 1px #404040 solid;
-    margin: 1rem;
-  }
+
 
   .single-product{
     text-align: center;
     width: 30%;
+    margin: 1rem;
+  }
+
+  .product {
+    border: 1px #404040 solid;
     margin: 1rem;
   }
   
@@ -63,8 +64,16 @@ body {
     padding: 1rem;
   }
 
-  .swal2-popup {
+  .swal2-styled {
     background-color: #f8d7da !important;
     border-color: #f5c6cb !important;
     color: #721c24 !important;
+  }
+
+  .app-navbar {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .app-navbar.scrolled {
+    background-color: #f8f9fa; /* Set your desired background color for scrolling */
   }

@@ -37,7 +37,7 @@ export default function ProductCard({ product }) {
 
     return (
 
-            <div className='product' key={product._id}>
+            <div className='product' key={product._id} >
                 <Link to={`/products/${product._id}`}>
                     <img src={product.image} alt={product.name}/>
                 </Link>

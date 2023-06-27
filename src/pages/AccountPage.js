@@ -27,7 +27,7 @@ export default function AccountPage() {
   }, []);
 
   return (
-    <div className='my-5'>
+    <div className='my-5' style={{ minHeight: '100vh' }}>
       <h1>Account Page</h1>
       <Table className='my-5' striped bordered hover>
         <thead>
